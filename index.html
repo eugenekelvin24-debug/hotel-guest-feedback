@@ -77,7 +77,7 @@
     </div>
 
     <main>
-        <form action="submit_feedback.php" method="post">
+        <form action="https://formspree.io/f/mdaloadk" method="POST">
             <fieldset>
                 <legend>Personal Information</legend>
                 
@@ -167,34 +167,6 @@
         </form>
     </main>
 
-    <script>
-        const btn = document.getElementById("theme-toggle");
-        const metaTheme = document.getElementById("meta-theme");
-
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark-mode");
-            metaTheme.setAttribute("content", "#050507");
-        }
-
-        btn.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            const isDark = document.body.classList.contains("dark-mode");
-            metaTheme.setAttribute("content", isDark ? "#050507" : "#FDFBF0");
-            localStorage.setItem("theme", isDark ? "dark" : "light");
-        });
-
-        const checkIn = document.getElementById('check_in_date');
-        const checkOut = document.getElementById('check_out_date');
-
-        checkIn.addEventListener('change', () => {
-            if (checkIn.value) {
-                let date = new Date(checkIn.value);
-                date.setDate(date.getDate() + 1);
-                checkOut.min = date.toISOString().split("T")[0];
-            } else {
-                checkOut.removeAttribute('min');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
