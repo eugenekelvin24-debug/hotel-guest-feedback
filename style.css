@@ -381,19 +381,21 @@ body:not(.dark-mode) .icon-moon { display: none; }
         font-size: 0.95rem;
     }
 
-    /* Keep radio/checkbox inline on mobile with wrapping */
+    /* Keep radio/checkbox inline on mobile with 2-column grid */
     .input-group,
     .checkbox-group {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 0.9rem 1.2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
         align-items: center;
     }
 
     .radio-item,
     .checkbox-item {
-        width: auto;
-        flex: 0 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     /* Larger touch targets on small screens */
