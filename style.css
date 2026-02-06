@@ -14,19 +14,22 @@
     --hero-filter: linear-gradient(to bottom, rgba(253,251,240,0.35), rgba(253,251,240,0.92));
 }
 
-body.dark-mode {
-    --bg-gradient: linear-gradient(135deg, #0a0012, #14001f, #22003d);
-    --main-bg: rgba(18, 8, 28, 0.92);
-    --text-main: #f0e6ff;
-    --text-muted: #c4b3d9;
-    --accent: #e6c94d;
-    --accent-hover: #f0d470;
-    --field-bg: rgba(255,255,255,0.06);
-    --input-bg: rgba(255,255,255,0.09);
-    --border: rgba(255,255,255,0.16);
-    --shadow-sm: 0 4px 20px rgba(0,0,0,0.35);
-    --shadow-md: 0 12px 40px rgba(0,0,0,0.45);
-    --hero-filter: linear-gradient(to bottom, rgba(10,0,18,0.45), rgba(10,0,18,0.98));
+/* Auto-detect system dark mode preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-gradient: linear-gradient(135deg, #0a0012, #14001f, #22003d);
+        --main-bg: rgba(18, 8, 28, 0.92);
+        --text-main: #f0e6ff;
+        --text-muted: #c4b3d9;
+        --accent: #e6c94d;
+        --accent-hover: #f0d470;
+        --field-bg: rgba(255,255,255,0.06);
+        --input-bg: rgba(255,255,255,0.09);
+        --border: rgba(255,255,255,0.16);
+        --shadow-sm: 0 4px 20px rgba(0,0,0,0.35);
+        --shadow-md: 0 12px 40px rgba(0,0,0,0.45);
+        --hero-filter: linear-gradient(to bottom, rgba(10,0,18,0.45), rgba(10,0,18,0.98));
+    }
 }
 
 /* ========== BASE ========== */
