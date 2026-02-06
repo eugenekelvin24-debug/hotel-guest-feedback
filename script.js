@@ -1,38 +1,18 @@
-// Theme Toggle - Respects System Preference
+// Theme Toggle - Respects System Preference + Manual Override
 const themeBtn = document.getElementById("theme-toggle");
 const metaTheme = document.getElementById("meta-theme");
 
-// Check if user has a saved preference
-let userTheme = localStorage.getItem("theme");
+// Only apply manual saved preference (don't override system preference)
+const userTheme = localStorage.getItem("theme");
 
-// If no saved preference, check system preference
-if (!userTheme) {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    userTheme = prefersDark ? "dark" : "light";
-}
-
-// Apply the theme
 if (userTheme === "dark") {
     document.body.classList.add("dark-mode");
     metaTheme.setAttribute("content", "#050507");
-} else {
+} else if (userTheme === "light") {
     document.body.classList.remove("dark-mode");
     metaTheme.setAttribute("content", "#FDFBF0");
 }
-
-// Listen for system theme changes (if user changes OS settings)
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    // Only apply if user hasn't manually set a preference
-    if (!localStorage.getItem("theme")) {
-        if (e.matches) {
-            document.body.classList.add("dark-mode");
-            metaTheme.setAttribute("content", "#050507");
-        } else {
-            document.body.classList.remove("dark-mode");
-            metaTheme.setAttribute("content", "#FDFBF0");
-        }
-    }
-});
+// If no saved preference, CSS media query handles it automatically
 
 // Theme toggle button (manual override)
 themeBtn.addEventListener("click", () => {
