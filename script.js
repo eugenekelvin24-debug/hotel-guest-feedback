@@ -1,16 +1,45 @@
-// Theme Toggle
+// Theme Toggle - Respects System Preference
 const themeBtn = document.getElementById("theme-toggle");
 const metaTheme = document.getElementById("meta-theme");
 
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    metaTheme.setAttribute("content", "#050507");
+// Check if user has a saved preference
+let userTheme = localStorage.getItem("theme");
+
+// If no saved preference, check system preference
+if (!userTheme) {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    userTheme = prefersDark ? "dark" : "light";
 }
 
+// Apply the theme
+if (userTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    metaTheme.setAttribute("content", "#050507");
+} else {
+    document.body.classList.remove("dark-mode");
+    metaTheme.setAttribute("content", "#FDFBF0");
+}
+
+// Listen for system theme changes (if user changes OS settings)
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    // Only apply if user hasn't manually set a preference
+    if (!localStorage.getItem("theme")) {
+        if (e.matches) {
+            document.body.classList.add("dark-mode");
+            metaTheme.setAttribute("content", "#050507");
+        } else {
+            document.body.classList.remove("dark-mode");
+            metaTheme.setAttribute("content", "#FDFBF0");
+        }
+    }
+});
+
+// Theme toggle button (manual override)
 themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     const isDark = document.body.classList.contains("dark-mode");
     metaTheme.setAttribute("content", isDark ? "#050507" : "#FDFBF0");
+    // Save user's manual preference
     localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
