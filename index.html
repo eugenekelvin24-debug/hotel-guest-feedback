@@ -3,18 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guest Feedback | Grand Stay Hotel</title>
+    <meta name="description" content="Share your guest feedback experience at Grand Stay Hotel. Quick survey on room quality, service, and amenities. Help us improve your next visit.">
+    <meta name="keywords" content="Grand Stay Hotel, guest feedback, hotel survey, customer satisfaction, hotel reviews">
+    <meta name="author" content="Grand Stay Hotel">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Guest Feedback | Grand Stay Hotel">
+    <meta property="og:description" content="Share your guest feedback experience at Grand Stay Hotel. Help us improve your next visit.">
+    <meta property="og:image" content="/hotel-feedback.jpg">
+    <meta property="og:url" content="https://hotel-guest-feedback.vercel.app">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Guest Feedback | Grand Stay Hotel">
+    <meta name="twitter:description" content="Share your guest feedback and help us improve our hotel services.">
+    <meta name="twitter:image" content="/hotel-feedback.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hotel-guest-feedback.vercel.app">
+    
+    <title>Guest Feedback Form | Grand Stay Hotel - Share Your Experience</title>
     <meta id="meta-theme" name="theme-color" content="#FDFBF0">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Grand Stay Hotel",
+        "description": "Luxury hotel with comfort and exceptional service",
+        "url": "https://hotel-guest-feedback.vercel.app",
+        "image": "/hotel-feedback.jpg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "availableLanguage": "en"
+        }
+    }
+    </script>
 </head>
 <body>
 
@@ -43,10 +81,10 @@
             <fieldset>
                 <legend>Personal Information</legend>
                 
-                <label for="name">Name</label>
+                <label for="name">Name(required):</label>
                 <input type="text" id="name" name="name" required placeholder="e.g., John Doe">
 
-                <label for="email">Email Address</label>
+                <label for="email">Email Address(required):</label>
                 <input type="email" id="email" name="email" required placeholder="example@email.com">
 
                 <label for="age">Age</label>
