@@ -1,8 +1,8 @@
 ## 📱 Preview
 
 <p align="center">
-  <img src="./previews/screenshot.png" width="300" alt="Full mobile preview" />
-  <img src="./previews/screenshotpc.png" width="300" alt="Full desktop preview" />
+  <img src="./darkmode.png" width="300" alt="Darkmode preview" />
+  <img src="./lightmode.png" width="300" alt="Lightmode preview" />
 </p>
 
 
