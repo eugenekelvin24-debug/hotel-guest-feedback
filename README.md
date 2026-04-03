@@ -1,3 +1,12 @@
+## 📱 Preview
+
+<p align="center">
+  <img src="./previews/screenshot.png" width="300" alt="Full mobile preview" />
+  <img src="./previews/screenshotpc.png" width="300" alt="Full desktop preview" />
+</p>
+
+
+
 Grand Stay Hotel - Guest Feedback Form
 
 A elegant, high-end landing page designed for luxury hotel guest engagement. This project demonstrates a polished "premium" UI/UX using core web technologies without the overhead of heavy frameworks.
