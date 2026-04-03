@@ -65,6 +65,7 @@ Check out the live project here: hotel-guest-feedback.vercel.app
 🛠️ Technical Highlights
 
     Advanced Theming System:
-    The project implements a robust dark/light mode toggle using CSS Custom Properties (Variables). By scoping variables to the        :root and a .dark-mode class, the entire UI can transition smoothly between themes without redundant code.
+    The project implements a robust dark/light mode toggle using CSS Custom Properties (Variables). By scoping variables to
+    the :root and a .dark-mode class, the entire UI can transition smoothly between themes without redundant code.
 
 
