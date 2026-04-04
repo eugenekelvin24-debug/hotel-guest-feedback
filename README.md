@@ -37,7 +37,7 @@ This project uses Formspree for reliable, serverless form submissions.
 
     HTML5: Semantic structure for accessibility.
 
-    CSS3: Custom "premium" styling with a focus on dark-themed UI.
+    CSS3: Custom "premium" styling with a focus premium light/dark theme.
 
     Vanilla JavaScript: Theme switching logic and interactive button animations.
 
